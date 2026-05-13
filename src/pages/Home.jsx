@@ -45,9 +45,9 @@ export default function Home() {
       >
         {/* Left Content */}
         <div className="max-w-2xl space-y-6 sm:space-y-8 w-full lg:w-auto animate-slideUp pt-10">
-          <div className="inline-block bg-yellow-500 text-white text-xs sm:text-sm px-3 sm:px-4 py-1 rounded-lg shadow-sm animate-slideDown ">
+          {/* <div className="inline-block bg-yellow-500 text-white text-xs sm:text-sm px-3 sm:px-4 py-1 rounded-lg shadow-sm animate-slideDown ">
             Welcome to my portfolio
-          </div>
+          </div> */}
 
           <div>
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight min-h-[80px] sm:min-h-[120px] md:min-h-[160px] animate-slideLeft">
