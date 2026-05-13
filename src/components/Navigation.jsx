@@ -1,11 +1,20 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-
+import img1 from '../assets/1.png'
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
 
   const isActive = (path) => location.pathname === path
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a')
+    link.href = '/1.png' // Update this to the actual path of your CV file
+    link.download = 'CV.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
 
   return (
     <header className="w-full px-4 sm:px-6 md:px-20 py-4 md:py-6 flex items-center justify-between bg-[#f5f5f5] sticky top-0 z-50 shadow-sm animate-slideDown">
@@ -54,7 +63,10 @@ export default function Navigation() {
       </nav>
 
       {/* Desktop Download Button */}
-      <button className="hidden md:flex items-center gap-2 lg:gap-3 bg-white px-4 lg:px-6 py-3 lg:py-4 rounded-2xl shadow-sm hover:shadow-md transition-all font-medium text-sm lg:text-base hover:scale-105 active:scale-95">
+      <button
+        onClick={handleDownloadCV}
+        className="hidden md:flex items-center gap-2 lg:gap-3 bg-white px-4 lg:px-6 py-3 lg:py-4 rounded-2xl shadow-sm hover:shadow-md transition-all font-medium text-sm lg:text-base hover:scale-105 active:scale-95"
+      >
         Download CV
 
         <svg
@@ -146,7 +158,10 @@ export default function Navigation() {
               Contact
             </Link>
 
-            <button className="w-full flex items-center justify-center gap-2 bg-violet-600 text-white px-4 py-3 rounded-2xl hover:bg-violet-700 transition-all font-medium mt-4 active:scale-95">
+            <button
+              onClick={handleDownloadCV}
+              className="w-full flex items-center justify-center gap-2 bg-violet-600 text-white px-4 py-3 rounded-2xl hover:bg-violet-700 transition-all font-medium mt-4 active:scale-95"
+            >
               Download CV
 
               <svg

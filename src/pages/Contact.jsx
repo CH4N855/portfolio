@@ -25,7 +25,8 @@ export default function Contact() {
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )
     
-    window.location.href = `mailto:hello@johndoe.com?subject=${subject}&body=${body}`
+    window.location.href = `emailto:reactjs35@gmail.com ? subject=${subject}&body=${body}`
+
     
     setSubmitted(true)
     setFormData({ name: '', email: '', message: '' })
@@ -53,7 +54,7 @@ export default function Contact() {
             >
               <div className="text-4xl mb-3 sm:mb-4">📧</div>
               <h3 className="text-lg sm:text-xl font-bold mb-2">Email</h3>
-              <p className="text-gray-600 hover:text-violet-600 transition-colors text-sm sm:text-base break-all">hello@johndoe.com</p>
+              <p className="text-gray-600 hover:text-violet-600 transition-colors text-sm sm:text-base break-all">reactjs35@gmail.com </p>
             </a>
 
             <a
@@ -68,7 +69,7 @@ export default function Contact() {
             <div className="bg-[#f5f5f5] rounded-2xl p-6 sm:p-8 text-center hover:shadow-lg transition-shadow animate-slideRight">
               <div className="text-4xl mb-3 sm:mb-4">📍</div>
               <h3 className="text-lg sm:text-xl font-bold mb-2">Location</h3>
-              <p className="text-gray-600 text-sm sm:text-base">San Francisco, CA</p>
+              <p className="text-gray-600 text-sm sm:text-base">Cambodia</p>
             </div>
           </div>
 
@@ -105,7 +106,7 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="john@example.com"
+                  placeholder="reactjs35@gmail.com"
                   required
                   className="w-full p-3 sm:p-4 rounded-2xl border-2 border-gray-200 outline-none focus:border-violet-500 transition-colors text-sm sm:text-base"
                 />
@@ -136,17 +137,20 @@ export default function Contact() {
 
           {/* Social Links */}
           <div className="mt-12 sm:mt-16 text-center animate-slideUp">
-            <h3 className="text-2xl sm:text-2xl font-bold mb-4 sm:mb-6">Connect With Me</h3>
+            <h3 className="text-2xl sm:mt-2 font-bold mb-4 sm:mb-6">Connect With Me</h3>
             <div className="flex items-center justify-center gap-4 sm:gap-6 flex-wrap">
               {[
-                { name: 'Instagram', icon: '📷' },
-                { name: 'LinkedIn', icon: '💼' },
-                { name: 'GitHub', icon: '🔗' },
-                { name: 'Twitter', icon: '𝕏' }
+                { name: 'Instagram', icon: '📷', href: '#' },
+                { name: 'LinkedIn', icon: '💼', href: '#' },
+                { name: 'GitHub', icon: '🔗', href: '#' },
+                { name: 'Twitter', icon: '𝕏', href: '#' },
+                { name: 'Gmail', icon: '✉️', href: 'https://mail.google.com/mail/u/0/#inbox' }
               ].map((social, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={social.href}
+                  target={social.href.startsWith('http') ? '_blank' : undefined}
+                  rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="w-12 h-12 sm:w-14 sm:h-14 bg-gray-100 rounded-full flex items-center justify-center text-xl sm:text-2xl hover:-translate-y-2 hover:shadow-lg transition-all cursor-pointer hover:bg-violet-100"
                   title={social.name}
                 >
