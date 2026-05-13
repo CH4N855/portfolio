@@ -143,8 +143,7 @@ export default function Contact() {
                 { name: 'Instagram', icon: '📷', href: '#' },
                 { name: 'LinkedIn', icon: '💼', href: '#' },
                 { name: 'GitHub', icon: '🔗', href: '#' },
-                { name: 'Twitter', icon: '𝕏', href: '#' },
-                { name: 'Gmail', icon: '✉️', href: 'https://mail.google.com/mail/u/0/#inbox' }
+                { name: 'Twitter', icon: '𝕏', href: '#' }
               ].map((social, index) => (
                 <a
                   key={index}
