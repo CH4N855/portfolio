@@ -44,8 +44,8 @@ export default function Home() {
         className="flex-1 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 md:px-12 lg:px-20 pt-8 sm:pt-10 lg:pt-0 gap-8 lg:gap-16"
       >
         {/* Left Content */}
-        <div className="max-w-2xl space-y-6 sm:space-y-8 w-full lg:w-auto animate-slideUp">
-          <div className="inline-block bg-yellow-500 text-white text-xs sm:text-sm px-3 sm:px-4 py-1 rounded-lg shadow-sm animate-slideDown">
+        <div className="max-w-2xl space-y-6 sm:space-y-8 w-full lg:w-auto animate-slideUp pt-10">
+          <div className="inline-block bg-yellow-500 text-white text-xs sm:text-sm px-3 sm:px-4 py-1 rounded-lg shadow-sm animate-slideDown ">
             Welcome to my portfolio
           </div>
 
@@ -67,7 +67,7 @@ export default function Home() {
             Experienced frontend developer with a passion for creating visually stunning and user-friendly websites. I specialize in React, modern web technologies, and delivering pixel-perfect designs that make a difference.
           </p>
 
-          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-5 pt-2 animate-slideLeft" style={{ animationDelay: '0.2s' }}>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-5 pt-2 animate-slideLeft pb-10" style={{ animationDelay: '0.2s' }}>
             <Link
               to="/contact"
               className="bg-violet-600 hover:bg-violet-700 transition-all text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold shadow-lg shadow-violet-200 hover:scale-105 active:scale-95 w-full sm:w-auto text-center no-underline"
@@ -75,7 +75,7 @@ export default function Home() {
               Hire Me
             </Link>
 
-            <button className="bg-white hover:bg-gray-100 transition-all px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-medium flex items-center justify-center sm:justify-start gap-2 sm:gap-3 shadow-sm hover:scale-105 active:scale-95 w-full sm:w-auto">
+            {/* <button className="bg-white hover:bg-gray-100 transition-all px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-medium flex items-center justify-center sm:justify-start gap-2 sm:gap-3 shadow-sm hover:scale-105 active:scale-95 w-full sm:w-auto">
               Download CV
 
               <svg
@@ -92,11 +92,11 @@ export default function Home() {
                   d="M12 16.5v-9m0 9l-3-3m3 3l3-3M4.5 19.5h15"
                 />
               </svg>
-            </button>
+            </button> */}
           </div>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-4 sm:gap-6 pt-6 sm:pt-10 flex-wrap animate-slideLeft" style={{ animationDelay: '0.3s' }}>
+          {/* <div className="flex items-center gap-4 sm:gap-6 pt-6 sm:pt-10 flex-wrap animate-slideLeft" style={{ animationDelay: '0.3s' }}>
             {[
               { name: 'Instagram', icon: 'I' },
               { name: 'LinkedIn', icon: 'L' },
@@ -112,7 +112,7 @@ export default function Home() {
                 {item.icon}
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Right Image */}

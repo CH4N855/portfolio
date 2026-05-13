@@ -136,7 +136,7 @@ export default function Contact() {
           </div>
 
           {/* Social Links */}
-          <div className="mt-12 sm:mt-16 text-center animate-slideUp">
+          {/* <div className="mt-12 sm:mt-16 text-center animate-slideUp">
             <h3 className="text-2xl sm:mt-2 font-bold mb-4 sm:mb-6">Connect With Me</h3>
             <div className="flex items-center justify-center gap-4 sm:gap-6 flex-wrap">
               {[
@@ -157,7 +157,7 @@ export default function Contact() {
                 </a>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

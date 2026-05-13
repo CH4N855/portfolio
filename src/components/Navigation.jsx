@@ -9,8 +9,8 @@ export default function Navigation() {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a')
-    link.href = '/1.png' // Update this to the actual path of your CV file
-    link.download = 'CV.pdf'
+    link.href = "src\assets\reactjs.png" // Update this to the actual path of your CV file
+    link.download = 'src\assets\reactjs.png' // Update this to the desired name for the downloaded file
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -19,7 +19,7 @@ export default function Navigation() {
   return (
     <header className="w-full px-4 sm:px-6 md:px-20 py-4 md:py-6 flex items-center justify-between bg-[#f5f5f5] sticky top-0 z-50 shadow-sm animate-slideDown">
       <Link to="/" className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight no-underline hover:scale-110 transition-transform">
-        <span className="text-cyan-500">Doe</span>
+        <span className="text-cyan-500">CHAN</span>
         <span className="text-gray-700">.</span>
       </Link>
 
